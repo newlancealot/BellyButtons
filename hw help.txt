@@ -1,0 +1,44 @@
+w15d2a2 pie
+week 11 sqllite
+1. Use Flask with HTML and JS.
+    Use a SQLAlchemy in flask (or read in CSV)
+    Output data as JSON
+
+    1a. Create HTML
+    1b.routes: 
+        - "/"
+        - '/names'
+        - '/otu'
+        - '/metadata/<samples>'
+        - '/wfreq/<sample>'
+        - '/samples/<sample>
+
+2. Plotly.JS
+    2a. use '/names' route to populate a dropdown
+        - use document.getElementById, document.createElement and append to populate the create option
+        - use HTML tag '<select id="selDataset" onchange="optionChanged(this.value)"></select>
+
+    2b. Create a function call 'optionChanged'
+    2c. Create a PIE chart using '/samples/<sample> and /otu' for TOP 10 samples
+        Use:
+        -Sample Values as values for pie chart
+        -OTU ID for labels
+        -OTU Description as hovertext for chart
+        -Plotly.restyle to update chart for new sample selection
+        
+3. Create Bubble chart using data from routes:  '/samples/<sample> and /otu' 
+    3a. PLOT Sample Value -vs- OTU ID
+        Use:
+        - The OTU IDs for the x values
+        - The Sample Values for the y values
+        - The Sample Values for the marker size
+        - The OTU IDs for the marker colors
+        - The OTU Description Data for the text values
+        - Plotly.restyle to update the chart whenever a new sample is selected
+    3b. Display from the route  '/metadata/<sample>'
+        -Display each key/value pair from the metadata JSON
+        -Update the metadata for each sample that is selected
+
+
+
+
